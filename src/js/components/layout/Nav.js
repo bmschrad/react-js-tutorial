@@ -36,7 +36,7 @@ export default class Nav extends React.Component {
                 <div class={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class={featuredClass}>
-                            <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Featured</IndexLink>
+                            <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Todos</IndexLink>
                         </li>
                         <li class={archivesClass}>
                             <IndexLink to="archives" onClick={this.toggleCollapse.bind(this)}>Archives</IndexLink>
