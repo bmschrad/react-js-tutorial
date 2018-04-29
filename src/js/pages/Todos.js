@@ -11,6 +11,14 @@ export default class Featured extends React.Component {
         console.log(this.state);
     }
 
+    componentWillMount() {
+        TodoStore.on("change", () => {
+            this.setState({
+                todos: TodoStore.getAll()
+            });
+        });
+    }
+
     render() {
         const { todos } = this.state;
         

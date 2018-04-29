@@ -20,7 +20,7 @@ export default class Todo extends React.Component {
 
         return (
             <li>
-                <span>{text}</span>
+                <span>{text} </span>
                 <span>{icon}</span>
             </li>
         );
