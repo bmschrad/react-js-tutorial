@@ -20,8 +20,8 @@ export default class Featured extends React.Component {
         });
     }
 
-    createTodo() {
-        TodoActions.createTodo(Date.now());
+    reloadTodo() {
+        TodoActions.reloadTodo();
     }
     
     render() {
@@ -33,7 +33,7 @@ export default class Featured extends React.Component {
 
         return (
             <div>
-                <button onClick={this.createTodo.bind(this)}>Create</button>
+                <button onClick={this.reloadTodo.bind(this)}>Reload</button>
                 <h1>Todos</h1>
                 <ul>{TodoComponents}</ul>
             </div>
