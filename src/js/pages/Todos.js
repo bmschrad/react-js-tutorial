@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Todo from "../components/Todo";
 import TodoStore from "../stores/TodoStore";
+import * as TodoActions from "../actions/TodoActions";
 
 export default class Featured extends React.Component {
     constructor() {
@@ -19,6 +20,10 @@ export default class Featured extends React.Component {
         });
     }
 
+    createTodo() {
+        TodoActions.createTodo(Date.now());
+    }
+    
     render() {
         const { todos } = this.state;
         
@@ -28,6 +33,7 @@ export default class Featured extends React.Component {
 
         return (
             <div>
+                <button onClick={this.createTodo.bind(this)}>Create</button>
                 <h1>Todos</h1>
                 <ul>{TodoComponents}</ul>
             </div>
